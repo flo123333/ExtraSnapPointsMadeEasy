@@ -518,12 +518,22 @@ internal class ExtraSnapsAdder
             /* Beams & Poles */
             // Core wood log walls have 4 snap points by default
             case "wood_wall_log": // core wood beam 2m
+                return new[]
+                {
+                    new NamedSnapPoint(0.0f, -0.25f, 0.0f, $"{BOTTOM} {CENTER}"),
+                    new NamedSnapPoint(Vector3.zero, CENTER),
+                    new NamedSnapPoint(0.0f, 0.25f,  0.0f, $"{TOP} {CENTER}"),
+                    new NamedSnapPoint(1.0f, 0.25f,  0.0f, $"{EDGE} {CENTER} 1"),
+                    new NamedSnapPoint(-1.0f, 0.25f,  0.0f, $"{EDGE} {CENTER} 2"),
+                };
             case "wood_wall_log_4x0.5": // core wood beam 4m
                 return new[]
                 {
                     new NamedSnapPoint(0.0f, -0.25f, 0.0f, $"{BOTTOM} {CENTER}"),
                     new NamedSnapPoint(Vector3.zero, CENTER),
                     new NamedSnapPoint(0.0f, 0.25f,  0.0f, $"{TOP} {CENTER}"),
+                    new NamedSnapPoint(2.0f, 0.25f,  0.0f, $"{EDGE} {CENTER} 1"),
+                    new NamedSnapPoint(-2.0f, 0.25f,  0.0f, $"{EDGE} {CENTER} 2"),
                 };
 
             /* Beds */
